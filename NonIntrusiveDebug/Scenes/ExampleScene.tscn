@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Spawner/Spawner.tscn" type="PackedScene" id=2]
+
+[node name="ExampleScene" type="Node2D"]
+
+[node name="Spawner1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 334, -210 )
+
+[node name="Spawner2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 336, -22 )
+
+[node name="Spawner3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 337, 183 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true

@@ -1,0 +1,8 @@
+E:\Coding\Godot\Beider.Github\NonIntrusiveDebug\.mono\temp\bin\Debug\Non Intrusive Debug.dll
+E:\Coding\Godot\Beider.Github\NonIntrusiveDebug\.mono\temp\bin\Debug\Non Intrusive Debug.pdb
+E:\Coding\Godot\Beider.Github\NonIntrusiveDebug\.mono\temp\obj\Debug\Non Intrusive Debug.csprojAssemblyReference.cache
+E:\Coding\Godot\Beider.Github\NonIntrusiveDebug\.mono\temp\obj\Debug\Non Intrusive Debug.csproj.CoreCompileInputs.cache
+E:\Coding\Godot\Beider.Github\NonIntrusiveDebug\.mono\temp\obj\Debug\Non Intrusive Debug.AssemblyInfoInputs.cache
+E:\Coding\Godot\Beider.Github\NonIntrusiveDebug\.mono\temp\obj\Debug\Non Intrusive Debug.AssemblyInfo.cs
+E:\Coding\Godot\Beider.Github\NonIntrusiveDebug\.mono\temp\obj\Debug\Non Intrusive Debug.dll
+E:\Coding\Godot\Beider.Github\NonIntrusiveDebug\.mono\temp\obj\Debug\Non Intrusive Debug.pdb
