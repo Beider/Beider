@@ -9,7 +9,7 @@
 [sub_resource type="World" id=2]
 environment = SubResource( 1 )
 
-[sub_resource type="ShaderMaterial" id=4]
+[sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 3 )
 shader_param/color = Color( 1, 1, 1, 1 )
 shader_param/width = 1.0
@@ -17,12 +17,12 @@ shader_param/pattern = 0
 shader_param/inside = false
 shader_param/add_margins = true
 shader_param/alpha = 0.5
-shader_param/line_interval_x = 0.0166667
-shader_param/line_interval_y = 0.0296296
-shader_param/enable_build_grid = true
+shader_param/line_interval_x = 0.05
+shader_param/line_interval_y = 0.05
+shader_param/enable_build_grid = false
 shader_param/grid_offset = Vector2( 0, 0 )
 
-[sub_resource type="ViewportTexture" id=3]
+[sub_resource type="ViewportTexture" id=4]
 viewport_path = NodePath("Viewport")
 
 [node name="Example" type="Node2D"]
@@ -184,9 +184,9 @@ texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="ViewportOutput" type="Sprite" parent="."]
-material = SubResource( 4 )
+material = SubResource( 3 )
 position = Vector2( 512, 300 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
