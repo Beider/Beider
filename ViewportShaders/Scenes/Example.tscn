@@ -183,6 +183,306 @@ position = Vector2( 512, 300 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
+[node name="MovingIcon31" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon32" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon33" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon34" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon35" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon36" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon37" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon38" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon39" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon40" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon41" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon42" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon43" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon44" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon45" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon46" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon47" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon48" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon49" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon50" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon51" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon52" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon53" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon54" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon55" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon56" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon57" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon58" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon59" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon60" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon61" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon62" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon63" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon64" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon65" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon66" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon67" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon68" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon69" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon70" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon71" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon72" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon73" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon74" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon75" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon76" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon77" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon78" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon79" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon80" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon81" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon82" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon83" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon84" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon85" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon86" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon87" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon88" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon89" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MovingIcon90" type="Sprite" parent="Viewport"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
 [node name="ViewportOutput" type="Sprite" parent="."]
 material = SubResource( 3 )
 position = Vector2( 512, 300 )

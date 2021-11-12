@@ -1,0 +1,54 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "Constants",
+"language": "GDScript",
+"path": "res://Scripts/Managers/Constants.gd"
+}, {
+"base": "Sprite",
+"class": "MovingIcon",
+"language": "GDScript",
+"path": "res://Scripts/Scenes/MovingIcon.gd"
+}, {
+"base": "Node2D",
+"class": "Spawner",
+"language": "GDScript",
+"path": "res://Scripts/Scenes/Spawner.gd"
+} ]
+_global_script_class_icons={
+"Constants": "",
+"MovingIcon": "",
+"Spawner": ""
+}
+
+[application]
+
+config/name="Signal Example"
+run/main_scene="res://Scenes/Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+PlayerData="*res://Scripts/Managers/PlayerData.gd"
+
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
