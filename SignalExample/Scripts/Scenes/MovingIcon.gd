@@ -1,23 +1,28 @@
 extends Sprite
 class_name MovingIcon
 
+# signals
+signal about_to_despawn;
+
 #constants
+const SIGNAL_ABOUT_TO_DESPAWN : String = "about_to_despawn";
 const speed : float = 200.0;
 
 # local variables
 var target : Node2D = null;
-var owning_spawner : Spawner = null;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Get first goal that exists in tree
 	target = get_tree().get_nodes_in_group(Constants.GROUP_GOAL)[0];
-	
-#
-# Called by spawner to set which spawner we belong to
-#
-func set_spawner(spawner : Spawner):
-	owning_spawner = spawner;
+	PlayerData.connect(PlayerData.SIGNAL_GAME_OVER, self, "on_game_over");
+
+func _exit_tree():
+	PlayerData.disconnect(PlayerData.SIGNAL_GAME_OVER, self, "on_game_over");
+
+
+func on_game_over():
+	queue_free();
 
 #
 # Move if we got a target
@@ -39,7 +44,7 @@ func _on_Area2D_area_entered(area):
 # Called when we are told to despawn ourselves
 #
 func despawn():
-	owning_spawner.notify_despawn(self);
+	emit_signal(SIGNAL_ABOUT_TO_DESPAWN);
 	queue_free();
 
 #

@@ -18,6 +18,20 @@ var is_spawning : bool = false;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	moving_icon_scene = ResourceLoader.load(Constants.SCENE_MOVING_ICON);
+	PlayerData.connect(PlayerData.SIGNAL_GAME_OVER, self, "on_game_over");
+	PlayerData.connect(PlayerData.SIGNAL_GAME_START, self, "on_game_start");
+
+func _exit_tree():
+	PlayerData.disconnect(PlayerData.SIGNAL_GAME_OVER, self, "on_game_over");
+	PlayerData.disconnect(PlayerData.SIGNAL_GAME_START, self, "on_game_start");
+
+
+func on_game_over():
+	is_spawning = false;
+
+func on_game_start():
+	current_icons = 0;
+	is_spawning = true;
 
 #
 # spawns icons at regular intervals
@@ -40,11 +54,11 @@ func spawn_icon():
 	var icon = moving_icon_scene.instance();
 	get_parent().add_child(icon);
 	icon.global_position = position;
-	icon.set_spawner(self);
+	icon.connect(MovingIcon.SIGNAL_ABOUT_TO_DESPAWN, self, "notify_despawn");
 	current_icons += 1;
 
 #
 # notification sent by the moving icon when it is despawned
 #
-func notify_despawn(icon):
+func notify_despawn():
 	current_icons -= 1;
