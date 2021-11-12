@@ -9,7 +9,7 @@ func _ready():
 
 func _exit_tree():
 	PlayerData.disconnect(PlayerData.SIGNAL_GAME_OVER, self, "on_game_over");
-	PlayerData.diconnect(PlayerData.SIGNAL_GAME_START, self, "on_game_start");
+	PlayerData.disconnect(PlayerData.SIGNAL_GAME_START, self, "on_game_start");
 	PlayerData.disconnect(PlayerData.SIGNAL_LIVES_CHANGED, self, "on_stats_changed");
 	PlayerData.disconnect(PlayerData.SIGNAL_SCORE_CHANGED, self, "on_stats_changed");
 
