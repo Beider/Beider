@@ -6,13 +6,24 @@ export var SaveName : String = "SaveExample"
 var icons : Array = []
 
 var settings
+var btnAutoSave : Button = null
+var lineInterval : LineEdit = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SaveManager.add_savable_object(self)
 	settings = SaveManager.get_data_storage(SettingsStorage.STORAGE_NAME)
-	print("Settings value: " + settings.get_value())
 	load_data()
+	init_ui()
+
+#
+# intialize the ui
+#
+func init_ui():
+	btnAutoSave = get_node("CanvasLayer/Root/ChkAutoSave")
+	lineInterval = get_node("CanvasLayer/Root/LineInterval")
+	btnAutoSave.pressed = settings.AUTOSAVE_ENABLED
+	lineInterval.text = str(settings.AUTOSAVE_INTERVAL)
 
 #
 # Load the data if it exists
@@ -45,7 +56,7 @@ func add_icon(position):
 	instance.connect(SavableSprite.SIGNAL_NODE_REMOVED, self, "node_removed")
 	add_child(instance)
 	icons.push_back(instance)
-	instance.global_position = position
+	instance.set_g_postion(position)
 
 #
 # Called form icon when it is about to be removed
@@ -66,6 +77,14 @@ func get_save_data():
 	var dict : Dictionary = {}
 	var i = 0
 	for icon in icons:
-		dict["icon" + str(i)] = var2str(icon.global_position)
+		dict["icon" + str(i)] = var2str(icon.g_position)
 		i += 1
 	return dict
+
+
+func _on_ChkAutoSave_pressed():
+	settings.AUTOSAVE_ENABLED = btnAutoSave.pressed
+
+
+func _on_LineInterval_text_changed(new_text):
+	settings.AUTOSAVE_INTERVAL = float(lineInterval.text)

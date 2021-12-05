@@ -13,10 +13,6 @@ const SAVE_FILE_NAME = "user://SaveGame.json"
 
 const DATA_STORAGE_PATH = "res://Scenes/DataStorages/"
 
-
-const AUTOSAVE_ENABLED = true
-const AUTOSAVE_INTERVAL = 5
-
 const SIGNAL_ON_GAME_SAVED = "on_game_saved"
 
 #
@@ -30,26 +26,21 @@ signal on_game_saved
 #
 # key = get_save_name, data = get_save_data
 var loaded_data : Dictionary = {}
-var savable_objects : Array = []
 var data_storages : Dictionary = {}
+var savable_objects : Array = []
 var autosave_timer : Timer = null
+
+var settings
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().set_auto_accept_quit(false)
 	load_from_file()
-	init_autosave()
 	init_data_storages()
+	settings = get_data_storage(SettingsStorage.STORAGE_NAME)
+	init_autosave()
 	get_tree().connect("node_removed", self, "on_node_removed")
-	# Optionally automatically add nodes:
-	#get_tree().connect("node_added", self, "on_node_added")
-
-#
-# Optional: When a node is added
-#
-func on_node_added(node):
-	add_savable_object(node)
 
 #
 # When a node is removed check if it is a savable object
@@ -74,21 +65,21 @@ func _notification(what):
 # Create autosave timer
 #
 func init_autosave():
-	if (AUTOSAVE_ENABLED):
+	if (settings.AUTOSAVE_ENABLED):
 		autosave_timer = Timer.new()
-		autosave_timer.wait_time = AUTOSAVE_INTERVAL
+		autosave_timer.wait_time = settings.AUTOSAVE_INTERVAL
 		autosave_timer.connect("timeout", self, "save")
 		add_child(autosave_timer)
 		autosave_timer.start()
 
-
 #
-# Get a data storage if it exists or null if not
+# Get data storage
 #
-func get_data_storage(name : String):
-	if (data_storages.has(name)):
-		return data_storages[name]
+func get_data_storage(key : String):
+	if (data_storages.has(key)):
+		return data_storages[key]
 	return null
+
 
 #
 # Create data storages from all scenes in the DATA_STORAGE_PATH folder
@@ -141,7 +132,10 @@ func load_from_file():
 	loaded_data.clear()
 	file.open(SAVE_FILE_NAME, File.READ)
 	while (!file.eof_reached()):
-		var jr = JSON.parse(file.get_line())
+		var line = file.get_line()
+		if (line == null || line.length() < 2):
+			continue
+		var jr = JSON.parse(line)
 		if (jr.error == OK):
 			var data = jr.result
 			loaded_data[data[SAVE_DATA_NAME]] = data

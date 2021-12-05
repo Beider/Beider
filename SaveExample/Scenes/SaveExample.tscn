@@ -29,3 +29,22 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="ChkAutoSave" type="CheckBox" parent="CanvasLayer/Root"]
+margin_left = 902.358
+margin_top = 10.5838
+margin_right = 1011.36
+margin_bottom = 34.5838
+text = "Autosave"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineInterval" type="LineEdit" parent="CanvasLayer/Root"]
+margin_left = 914.0
+margin_top = 42.0
+margin_right = 986.0
+margin_bottom = 66.0
+
+[connection signal="pressed" from="CanvasLayer/Root/ChkAutoSave" to="." method="_on_ChkAutoSave_pressed"]
+[connection signal="text_changed" from="CanvasLayer/Root/LineInterval" to="." method="_on_LineInterval_text_changed"]
