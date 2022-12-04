@@ -9,10 +9,10 @@ shader_type canvas_item;
 // Keep this in mind when positioning the image in your scene
 
 // Size of our grid, please scale texture accordingly from outside
-uniform float tileSizeInPixels = 64f;
+uniform float tileSizeInPixels = 64.0f;
 
 // The cell size divided by 2
-uniform float halfTileSizeInPixels = 32f;
+uniform float halfTileSizeInPixels = 32.0f;
 
 // Size of textures in the atlas in pixels, assumed it is rectangular
 // Should be a power of 2
@@ -56,7 +56,7 @@ uniform bool blend = true;
 // returns - The tile position in the current mapData
 vec2 getTilePos(vec2 uv) {
 	// Find the tile we are on (we got a border of 1 so +1)
-	return vec2(floor(uv.x * mapTilesCountX)+1f, floor(uv.y * mapTilesCountY)+1f);
+	return vec2(floor(uv.x * mapTilesCountX)+1.0f, floor(uv.y * mapTilesCountY)+1.0f);
 }
 
 //
@@ -66,8 +66,8 @@ vec2 getTilePos(vec2 uv) {
 //
 // returns - the pixel position within the current tile
 vec2 getPixelPosInTile(vec2 uv) {
-	float exactPosX = floor(((uv.x * mapTilesCountX)+1f) * tileSizeInPixels);
-	float exactPosY = floor(((uv.y * mapTilesCountY)+1f) * tileSizeInPixels);
+	float exactPosX = floor(((uv.x * mapTilesCountX)+1.0f) * tileSizeInPixels);
+	float exactPosY = floor(((uv.y * mapTilesCountY)+1.0f) * tileSizeInPixels);
 	float relativePosX = mod(exactPosX, tileSizeInPixels);
 	float relativePosY = mod(exactPosY, tileSizeInPixels);
 	return vec2(relativePosX, relativePosY);
@@ -145,11 +145,11 @@ void fragment() {
 		// If these numbers are negative they are left / up
 		// Could be 0 at center of tile but does not matter as we will just sample ourselves
 		// and corner / sides should have no effect at center
-		float horizontal = clamp((halfTileSizeInPixels * -1f) + pixelPosInTile.x, -1f, 1f);
-		float vertical = clamp((halfTileSizeInPixels * -1f) + pixelPosInTile.y, -1f, 1f);
+		float horizontal = clamp((halfTileSizeInPixels * -1.0f) + pixelPosInTile.x, -1.0f, 1.0f);
+		float vertical = clamp((halfTileSizeInPixels * -1.0f) + pixelPosInTile.y, -1.0f, 1.0f);
 		// Corner pos is 0,0 - 0,64 - 64,0 - 64,64
-		vec2 cornerPos = vec2(max(horizontal * tileSizeInPixels, 0f), 
-							  max(vertical * tileSizeInPixels, 0f));
+		vec2 cornerPos = vec2(max(horizontal * tileSizeInPixels, 0.0f), 
+							  max(vertical * tileSizeInPixels, 0.0f));
 		
 		
 		// Grab the tile ID of the surrounding tiles we care about
@@ -170,10 +170,10 @@ void fragment() {
 		
 		// Extract blend strength as a number from 0 to 255 and convert it to 0 to 1 value
 		vec4 blendStrength = texelFetch(blendTexture, ivec2(vec2(modX, modY)), 0);
-		float strHorizontal = (blendStrength.r * 255.) / 100f;
-		float strVertical = (blendStrength.g * 255.) / 100f;
-		float strCorner = (blendStrength.b * 255.) / 100f;
-		float strSelf = (blendStrength.a * 255.) / 100f;
+		float strHorizontal = (blendStrength.r * 255.) / 100.0f;
+		float strVertical = (blendStrength.g * 255.) / 100.0f;
+		float strCorner = (blendStrength.b * 255.) / 100.0f;
+		float strSelf = (blendStrength.a * 255.) / 100.0f;
 		
 		// Blend based on percentages
 		COLOR = (colorSelf * strSelf) + (colorHorizontal * strHorizontal) + 
